@@ -1,0 +1,142 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Montserrat */
+
+:root {
+    --dark: rgb(0, 0, 0);
+    --light-green: rgb(116, 197, 137);
+    --green: rgb(38, 179, 50);
+    --dark-blue: rgb(29, 126, 126);
+    --light: rgb(213, 255, 248);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--light);
+    max-width:1600px;
+}
+
+h1 {
+    color: var(--dark);
+    margin: 20px 0 30px 0;
+    font-size: 1.3em;
+    text-transform: uppercase;
+}
+
+.todo {
+    width: 90%;
+    border-radius: 5px;
+    background: #fff;
+    box-shadow: 5px 2px 8px rgba(102, 100, 100, 0.4);
+    text-align: center;
+}
+
+.header {
+    border-radius: 5px 5px 0 0;
+    padding: 10px;
+    background-image: linear-gradient(340deg, #04e99d 0%, #91c3d1 100%);
+}
+
+.todoInput {
+    width: 90%;
+    margin-bottom:15px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    color: var(--dark);
+    background-color: var(--light);
+}
+
+.alertInfo {
+    margin-top: 10px;
+    color: var(--dark);
+}
+
+.addBtn {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    color: var(--dark);
+    background-color: var(--light);
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: color .3s, background-color .3s;
+}
+
+.addBtn:hover {
+    color: #fff;
+    background-color: var(--light-green);
+}
+
+.todoList {
+    padding: 20px 0;
+}
+
+.todoList h3 {
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+
+.todoList li{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px;
+    padding-top: 20px;
+    text-align: left;
+    list-style: none;
+    background-color: var(--light);
+    
+}
+
+.tools {
+    display: inline-block;
+}
+
+.tools button {
+    padding: 15px 10px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition: background-color .3s;
+}
+
+.tools button:hover {
+    background-color: rgb(133, 228, 183);
+}
+
+.complete {
+    color: var(--green);
+}
+
+.delete {
+    color: rgb(233, 77, 77);
+}
+
+.completed {
+    font-size: 12px;
+    color: var(--light-green);
+    text-decoration: line-through;
+    font-style: italic;
+}
+
+@media(min-width:768px){
+    body{
+        font-size: 1.5em;
+    }
+    .todoInput {
+        padding:20px;
+        font-size: 1em;
+    }
+    .addBtn, .tools button, .completed{
+        font-size: 0.9em;
+    }
+}
